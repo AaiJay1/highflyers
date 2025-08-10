@@ -238,7 +238,7 @@
         </header>
 
         <div class="hero-image">
-          <img src="hero-image.png" alt="Futuristic business vision illustration" />
+          <img src="/hero-image.png" alt="Futuristic business vision illustration" />
         </div>
 
         <h2 class="headline">BRINGING 2030 BUSINESS TO 2025</h2>
@@ -247,15 +247,23 @@
         <div id="countdown" class="countdown" aria-live="polite"></div>
 
         <p class="description">
-          Highflyers is building a new era of income systems with a <strong>global reward plan</strong>, multiple income streams, and a tight selection process that accepts only those with integrity. Get ready — limited spots.
-        </p>
+  Highflyers is redefining the future of earning with an exclusive <strong>global reward plan</strong> and multiple income streams that will leave others behind. This is your chance to step into the 2030 business model ahead of everyone else. Don’t wait — spots are limited, and once they’re gone, you’ll be on the outside looking in. Act now, or risk missing out on an opportunity that could change your financial future.
+</p>
+
 
         <a id="joinBtn" class="join-btn" href="https://chat.whatsapp.com/FCT06e9uQetDaiB3sTSxrT?mode=ac_t" target="_blank" rel="noopener noreferrer">
-          🔥 Join the Highflyers Community
-        </a>
+  🔥 Join the Highflyers Community
+</a>
 
-        <p class="small-note">Prepare now — early positioning secures better rewards.</p>
-      </div>
+<p class="small-note">Prepare now — early positioning secures better rewards.</p>
+
+<p class="last-chance" style="font-size: 1.2rem; font-weight: bold; color: #f59e0b; margin-top: 20px;">
+  LAST CHANCE! <br>
+  This private Highflyers community link will self-destruct in 80 seconds. <br>
+  Once it’s gone, entry closes — no second chance. <br><br>
+  <strong>Click the button above to join now!</strong>
+</p>
+
     </section>
   </main>
 
@@ -463,8 +471,8 @@
   <!-- END: Popup script -->
 
   <script>
-    // existing countdown script (kept as original)
-    const launchDate = new Date("October 1, 2025 00:00:00").getTime();
+    // Set the countdown to 60 seconds from now
+    const launchDate = new Date().getTime() + 60 * 2000; // 60 seconds from the current time
     const countdownEl = document.getElementById("countdown");
 
     function updateCountdown() {
@@ -472,27 +480,25 @@
       const timeLeft = launchDate - now;
 
       if (timeLeft <= 0) {
-        countdownEl.innerHTML = "<span class='launched'>🚀 We're Live!</span>";
+        countdownEl.innerHTML = `
+          <span class='last-chance'>LAST CHANCE!<br>
+          This private Highflyers community link will self-destruct in 60 seconds.<br>
+          Once it’s gone, entry closes — no second chance. 
+          </span>`;
         clearInterval(timer);
         return;
       }
 
-      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+      const seconds = Math.floor(timeLeft / 1500); // Only display seconds
 
       countdownEl.innerHTML = `
-        <div class="time-box"><span>${days}</span>Days</div>
-        <div class="time-box"><span>${hours}</span>Hours</div>
-        <div class="time-box"><span>${minutes}</span>Min</div>
         <div class="time-box"><span>${seconds}</span>Sec</div>
       `;
     }
 
     updateCountdown();
     const timer = setInterval(updateCountdown, 1000);
-  </script>
+</script>
 
   <a 
   href="https://wa.me/2349160189006?text=Hello%20Admin%2C%20I%20would%20like%20to%20know%20more%20about%20Highflyers." 
