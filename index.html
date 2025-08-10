@@ -183,7 +183,7 @@
 
     .whatsapp-float {
     position: fixed;
-    bottom: 80px; 
+    bottom: 80px; /* Above other floating features */
     right: 20px;
     background-color: #25d366;
     color: white;
@@ -198,13 +198,31 @@
     z-index: 9999;
     transition: background-color 0.3s ease;
   }
+
   .whatsapp-float:hover {
     background-color: #1ebe5d;
   }
+
   .whatsapp-float img {
     width: 28px;
     height: 28px;
     margin-right: 8px;
+  }
+
+  /* Mobile view - only icon */
+  @media (max-width: 600px) {
+    .whatsapp-float {
+      border-radius: 50%;
+      padding: 12px;
+      font-size: 0;
+      width: 52px;
+      height: 52px;
+      justify-content: center;
+    }
+
+    .whatsapp-float img {
+      margin: 0;
+    }
   }
   </style>
 </head>
