@@ -479,6 +479,14 @@
       const now = new Date().getTime();
       const timeLeft = launchDate - now;
 
+      if (timeLeft <= 0) {
+        countdownEl.innerHTML = `
+          <span class=' 
+          </span>`;
+        clearInterval(timer);
+        return;
+      }
+
       const seconds = Math.floor(timeLeft / 1500); // Only display seconds
 
       countdownEl.innerHTML = `
